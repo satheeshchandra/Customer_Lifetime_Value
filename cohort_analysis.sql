@@ -68,6 +68,6 @@ select sum(apr17) apr17, sum(may17) may17, sum(jun17) jun17, sum(jul17) jul17, s
 			, case when ss.end_date > '2020-10-01' then 1 else 0 end as oct20
 		from kaltura.vw_subscribers_subscriptions ss
 			join tp_packages tp on ss.package_id = tp.package_id
-		where ss.purchase_date between '2020-10-01' and '2020-11-01' -- and ss.end_date > '2018-05-01'
+		where ss.purchase_date between '2020-10-01' and '2020-11-01' 
 ) Q;
 
